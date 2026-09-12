@@ -1,7 +1,11 @@
-function TechCard({ technology, onAddToStack }) {
+function TechCard({ technology, stack, onAddToStack }) {
+  const isAdded = stack.some(
+    (item) => item.id === technology.id
+  );
+
   return (
     <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      
+
       {/* Icon */}
       <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-gray-50 p-3">
         <img
@@ -35,14 +39,20 @@ function TechCard({ technology, onAddToStack }) {
       {/* Rating + Difficulty */}
       <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4">
         <div>
-          <p className="text-xs text-gray-400">Rating</p>
+          <p className="text-xs text-gray-400">
+            Rating
+          </p>
+
           <p className="font-semibold text-gray-800">
             ⭐ {technology.rating}
           </p>
         </div>
 
         <div className="text-right">
-          <p className="text-xs text-gray-400">Difficulty</p>
+          <p className="text-xs text-gray-400">
+            Difficulty
+          </p>
+
           <p className="font-semibold text-gray-800">
             {technology.difficulty}
           </p>
@@ -52,9 +62,14 @@ function TechCard({ technology, onAddToStack }) {
       {/* Add Button */}
       <button
         onClick={() => onAddToStack(technology)}
-        className="mt-5 w-full rounded-xl bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-4 py-3 font-semibold text-white transition hover:opacity-90"
+        disabled={isAdded}
+        className={`mt-5 w-full rounded-xl px-4 py-3 font-semibold transition ${
+          isAdded
+            ? "cursor-not-allowed bg-gray-200 text-gray-500"
+            : "bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white hover:opacity-90"
+        }`}
       >
-        + Add to Stack
+        {isAdded ? "✓ Added to Stack" : "+ Add to Stack"}
       </button>
     </div>
   );

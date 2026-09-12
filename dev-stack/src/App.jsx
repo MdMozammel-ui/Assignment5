@@ -2,10 +2,12 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechCard from "./components/TechCard";
+import Stack from "./components/Stack";
 import technologies from "./data/technologies.json";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [stack, setStack] = useState([]);
 
   const categories = [
     "All",
@@ -19,8 +21,27 @@ function App() {
           (technology) => technology.category === selectedCategory
         );
 
+  // Add technology
   const handleAddToStack = (technology) => {
-    console.log("Added to stack:", technology.name);
+    const alreadyAdded = stack.some(
+      (item) => item.id === technology.id
+    );
+
+    if (alreadyAdded) {
+      return;
+    }
+
+    setStack([...stack, technology]);
+  };
+
+  // Remove one technology
+  const handleRemove = (id) => {
+    setStack(stack.filter((technology) => technology.id !== id));
+  };
+
+  // Remove all technologies
+  const handleRemoveAll = () => {
+    setStack([]);
   };
 
   return (
@@ -32,8 +53,8 @@ function App() {
       {/* Technology Section */}
       <section id="technologies" className="px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl">
-          
-          {/* Section Heading */}
+
+          {/* Heading */}
           <div className="text-center">
             <span className="rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-600">
               Explore Technologies
@@ -66,17 +87,29 @@ function App() {
             ))}
           </div>
 
-          {/* Technology Cards */}
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredTechnologies.map((technology) => (
-              <TechCard
-                key={technology.id}
-                technology={technology}
-                onAddToStack={handleAddToStack}
-              />
-            ))}
-          </div>
+          {/* Main Content */}
+          <div className="mt-10 grid gap-6 lg:grid-cols-4">
 
+            {/* Technology Cards */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-3">
+              {filteredTechnologies.map((technology) => (
+                <TechCard
+  key={technology.id}
+  technology={technology}
+  stack={stack}
+  onAddToStack={handleAddToStack}
+/>
+              ))}
+            </div>
+
+            {/* Your Stack */}
+            <Stack
+              stack={stack}
+              onRemove={handleRemove}
+              onRemoveAll={handleRemoveAll}
+            />
+
+          </div>
         </div>
       </section>
     </div>
