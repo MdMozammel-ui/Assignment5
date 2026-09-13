@@ -107,9 +107,9 @@ function App() {
       </span>
 
       <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        Build Your Perfect
-        <span className="ml-2 bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
-          Developer Stack
+        Explore the
+       <span className="ml-2 brand-gradient-text">
+        Technologies
         </span>
       </h2>
 

@@ -15,7 +15,7 @@ function Footer() {
                 &lt;/&gt;
               </div>
 
-              <span className="brand-gradient bg-clip-text text-xl font-bold text-transparent">
+            <span className="brand-gradient-text text-xl font-bold">
                 Dev Stack
               </span>
             </a>

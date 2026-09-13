@@ -11,7 +11,7 @@ function About() {
 
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Everything You Need to
-            <span className="ml-2 brand-gradient bg-clip-text text-transparent">
+            <span className="ml-2 brand-gradient-text">
               Build Better
             </span>
           </h2>
