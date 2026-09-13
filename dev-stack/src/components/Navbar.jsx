@@ -12,34 +12,49 @@ function Navbar() {
 
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-lg font-bold text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg brand-gradient text-lg font-bold text-white">
               &lt;/&gt;
             </div>
 
-            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-xl font-bold text-transparent">
+            <span className="brand-gradient bg-clip-text text-xl font-bold text-transparent">
               Dev Stack
             </span>
           </a>
 
           {/* Menu */}
           <div className="flex items-center gap-8">
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-pink-500">
+            <a
+              href="#"
+              className="text-sm font-medium text-gray-700 hover:text-pink-500"
+            >
               Home
             </a>
 
-            <a href="#technologies" className="text-sm font-medium text-gray-700 hover:text-pink-500">
+            <a
+              href="#technologies"
+              className="text-sm font-medium text-gray-700 hover:text-pink-500"
+            >
               Technologies
             </a>
 
-            <a href="#projects" className="text-sm font-medium text-gray-700 hover:text-pink-500">
+            <a
+              href="#projects"
+              className="text-sm font-medium text-gray-700 hover:text-pink-500"
+            >
               Projects
             </a>
 
-            <a href="#about" className="text-sm font-medium text-gray-700 hover:text-pink-500">
+            <a
+              href="#about"
+              className="text-sm font-medium text-gray-700 hover:text-pink-500"
+            >
               About
             </a>
 
-            <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-pink-500">
+            <a
+              href="#contact"
+              className="text-sm font-medium text-gray-700 hover:text-pink-500"
+            >
               Contact
             </a>
           </div>
@@ -50,7 +65,7 @@ function Navbar() {
               Sign In
             </button>
 
-            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-5 py-2 text-sm font-semibold text-white hover:opacity-90">
+            <button className="rounded-full brand-gradient px-5 py-2 text-sm font-semibold text-white hover:opacity-90">
               Sign Up
             </button>
           </div>
@@ -69,12 +84,15 @@ function Navbar() {
           </button>
 
           {/* Center Logo */}
-          <a href="#" className="absolute left-1/2 flex -translate-x-1/2 items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-sm font-bold text-white">
+          <a
+            href="#"
+            className="absolute left-1/2 flex -translate-x-1/2 items-center gap-2"
+          >
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg brand-gradient text-sm font-bold text-white">
               &lt;/&gt;
             </div>
 
-            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-lg font-bold text-transparent">
+            <span className="brand-gradient bg-clip-text text-lg font-bold text-transparent">
               Dev Stack
             </span>
           </a>
@@ -85,7 +103,7 @@ function Navbar() {
               Sign In
             </button>
 
-            <button className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-3 py-2 text-xs font-semibold text-white">
+            <button className="rounded-full brand-gradient px-3 py-2 text-xs font-semibold text-white">
               Sign Up
             </button>
           </div>

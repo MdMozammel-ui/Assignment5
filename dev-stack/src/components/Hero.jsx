@@ -1,128 +1,136 @@
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
-      {/* Background decorations */}
-      <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-orange-100 blur-3xl opacity-60"></div>
-      <div className="absolute -right-32 top-20 h-96 w-96 rounded-full bg-pink-100 blur-3xl opacity-60"></div>
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
-        
-        {/* Left Content */}
-        <div>
-          <span className="inline-flex items-center rounded-full border border-pink-200 bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-600">
-            🚀 Build Your Developer Stack
-          </span>
-
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Discover the Best
-            <span className="block bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
-              Technologies
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <span className="inline-flex rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-pink-600">
+              Build Your Developer Stack
             </span>
-            for Your Journey
-          </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
-            Explore modern technologies, discover powerful tools, and build
-            your perfect developer stack for your next amazing project.
-          </p>
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+              Build Better.
+              <span className="block brand-gradient bg-clip-text text-transparent">
+                Build Smarter.
+              </span>
+            </h1>
 
-          {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#technologies"
-              className="rounded-xl bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-pink-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              Explore Technologies →
-            </a>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-gray-600 sm:text-lg lg:mx-0">
+              Discover the best technologies for modern web development.
+              Explore different tools, compare technologies, and build your
+              perfect developer stack.
+            </p>
 
-            <a
-              href="#about"
-              className="rounded-xl border border-gray-300 bg-white px-6 py-3.5 font-semibold text-gray-700 transition duration-300 hover:-translate-y-1 hover:border-pink-400 hover:text-pink-500"
-            >
-              Learn More
-            </a>
-          </div>
+            {/* Buttons */}
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+              <a
+                href="#technologies"
+                className="rounded-full brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:opacity-90"
+              >
+                Explore Technologies
+              </a>
 
-          {/* Stats */}
-          <div className="mt-10 flex flex-wrap gap-8 border-t border-gray-100 pt-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">10+</h3>
-              <p className="mt-1 text-sm text-gray-500">Technologies</p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">5+</h3>
-              <p className="mt-1 text-sm text-gray-500">Categories</p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">100%</h3>
-              <p className="mt-1 text-sm text-gray-500">Developer Focused</p>
+              <a
+                href="#about"
+                className="rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-pink-300 hover:text-pink-500"
+              >
+                Learn More
+              </a>
             </div>
           </div>
-        </div>
 
-        {/* Right Visual */}
-        <div className="relative">
-          <div className="rounded-3xl bg-gradient-to-br from-orange-100 via-pink-100 to-violet-100 p-4 shadow-2xl sm:p-6">
-            
-            <div className="overflow-hidden rounded-2xl bg-gray-950 shadow-xl">
-              
-              {/* Browser Header */}
-              <div className="flex items-center gap-2 border-b border-gray-800 px-5 py-4">
-                <span className="h-3 w-3 rounded-full bg-red-400"></span>
-                <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
-                <span className="h-3 w-3 rounded-full bg-green-400"></span>
+          {/* Right Visual */}
+          <div className="relative mx-auto w-full max-w-xl">
+            <div className="rounded-3xl bg-slate-100 p-4 shadow-2xl sm:p-6">
 
-                <span className="ml-3 text-xs text-gray-500">
-                  developer-stack.js
+              {/* Code Editor */}
+              <div className="overflow-hidden rounded-2xl bg-gray-900 shadow-xl">
+
+                {/* Top Bar */}
+                <div className="flex items-center gap-2 border-b border-gray-700 px-4 py-3">
+                  <span className="h-3 w-3 rounded-full bg-red-400"></span>
+                  <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
+                  <span className="h-3 w-3 rounded-full bg-green-400"></span>
+
+                  <span className="ml-3 text-xs text-gray-400">
+                    developer-stack.jsx
+                  </span>
+                </div>
+
+                {/* Code */}
+                <div className="space-y-3 p-6 font-mono text-sm leading-6">
+                  <p className="text-gray-500">
+                    01&nbsp;&nbsp;
+                    <span className="text-purple-400">const</span>{" "}
+                    <span className="text-blue-300">myStack</span> = {"{"}
+                  </p>
+
+                  <p className="text-gray-500">
+                    02&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span className="text-pink-400">frontend</span>:{" "}
+                    <span className="text-green-300">"React"</span>,
+                  </p>
+
+                  <p className="text-gray-500">
+                    03&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span className="text-pink-400">backend</span>:{" "}
+                    <span className="text-green-300">"Node.js"</span>,
+                  </p>
+
+                  <p className="text-gray-500">
+                    04&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span className="text-pink-400">database</span>:{" "}
+                    <span className="text-green-300">"MongoDB"</span>,
+                  </p>
+
+                  <p className="text-gray-500">
+                    05&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span className="text-pink-400">language</span>:{" "}
+                    <span className="text-green-300">"JavaScript"</span>,
+                  </p>
+
+                  <p className="text-gray-500">
+                    06&nbsp;&nbsp;{"}"}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Cards */}
+            <div className="absolute -left-4 top-10 hidden rounded-xl bg-white p-3 shadow-xl sm:block">
+              <div className="flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-sm font-bold text-blue-600">
+                  ⚛
                 </span>
-              </div>
-
-              {/* Code */}
-              <div className="p-6 font-mono text-sm leading-8 sm:p-8 sm:text-base">
-                <p className="text-pink-400">
-                  const <span className="text-blue-400">stack</span> = [
-                </p>
-
-                <p className="pl-6 text-green-400">
-                  "React",
-                </p>
-
-                <p className="pl-6 text-green-400">
-                  "Node.js",
-                </p>
-
-                <p className="pl-6 text-green-400">
-                  "MongoDB",
-                </p>
-
-                <p className="pl-6 text-green-400">
-                  "Tailwind CSS"
-                </p>
-
-                <p className="text-pink-400">];</p>
-
-                <p className="mt-4 text-gray-500">
-                  // Build something amazing 🚀
-                </p>
-
-                <p className="mt-2 text-gray-500">
-                  // Choose. Build. Create.
-                </p>
+                <div>
+                  <p className="text-xs font-semibold text-gray-900">
+                    React
+                  </p>
+                  <p className="text-[10px] text-gray-500">
+                    Frontend
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Floating Cards */}
-          <div className="absolute -left-4 top-10 hidden rounded-xl border border-gray-100 bg-white px-4 py-3 shadow-lg sm:block">
-            <p className="text-xs text-gray-400">Popular</p>
-            <p className="font-bold text-gray-800">⚛️ React</p>
-          </div>
+            <div className="absolute -right-4 bottom-10 hidden rounded-xl bg-white p-3 shadow-xl sm:block">
+              <div className="flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-100 text-sm font-bold text-green-600">
+                  JS
+                </span>
+                <div>
+                  <p className="text-xs font-semibold text-gray-900">
+                    JavaScript
+                  </p>
+                  <p className="text-[10px] text-gray-500">
+                    Language
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <div className="absolute -bottom-5 -right-4 hidden rounded-xl border border-gray-100 bg-white px-4 py-3 shadow-lg sm:block">
-            <p className="text-xs text-gray-400">Developer Tool</p>
-            <p className="font-bold text-gray-800">⚡ Tailwind CSS</p>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import About from "./components/About";
 import TechCard from "./components/TechCard";
 import Stack from "./components/Stack";
 import Footer from "./components/Footer";
@@ -88,6 +90,9 @@ function App() {
       <Navbar />
 
       <Hero />
+      <Projects />
+
+      <About />
 
       <section
   id="technologies"
@@ -147,7 +152,7 @@ function App() {
       <div className="mt-12 grid gap-8 lg:grid-cols-4">
 
         {/* Technology Cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:col-span-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:col-span-3">
           {filteredTechnologies.map((technology) => (
             <TechCard
               key={technology.id}

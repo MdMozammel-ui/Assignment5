@@ -1,77 +1,96 @@
 function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
+    <footer id="contact" className="border-t border-gray-200 bg-gray-950 text-white">
 
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+
+        {/* Main Footer */}
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 font-bold">
+          <div className="lg:col-span-1">
+
+            <a href="#" className="flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg brand-gradient text-lg font-bold text-white">
                 &lt;/&gt;
               </div>
 
-              <span className="text-xl font-bold">
+              <span className="brand-gradient bg-clip-text text-xl font-bold text-transparent">
                 Dev Stack
               </span>
-            </div>
+            </a>
 
-            <p className="mt-4 max-w-sm text-sm leading-6 text-gray-400">
-              Discover powerful technologies and build the perfect developer
-              stack for your next project.
+            <p className="mt-4 max-w-xs text-sm leading-6 text-gray-400">
+              Discover modern technologies, build your perfect developer
+              stack, and create better projects.
             </p>
 
             {/* Social Links */}
-            <div className="mt-5 flex gap-3">
+            <div className="mt-6 flex items-center gap-3">
+
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg bg-gray-800 px-4 py-2 text-sm hover:bg-gray-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-800 text-sm font-semibold text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                aria-label="GitHub"
               >
-                GitHub
+                GH
               </a>
 
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg bg-gray-800 px-4 py-2 text-sm hover:bg-gray-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-800 text-sm font-semibold text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                aria-label="Twitter"
               >
-                Twitter
+                X
               </a>
 
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg bg-gray-800 px-4 py-2 text-sm hover:bg-gray-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-800 text-sm font-semibold text-gray-300 transition hover:bg-gray-700 hover:text-white"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                in
               </a>
+
             </div>
           </div>
 
           {/* Product */}
           <div>
-            <h3 className="font-semibold">Product</h3>
+            <h3 className="text-sm font-bold text-white">
+              Product
+            </h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-gray-400">
+            <ul className="mt-4 space-y-3">
               <li>
-                <a href="#technologies" className="hover:text-white">
+                <a
+                  href="#technologies"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
                   Technologies
                 </a>
               </li>
 
               <li>
-                <a href="#projects" className="hover:text-white">
+                <a
+                  href="#projects"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
                   Projects
                 </a>
               </li>
 
               <li>
-                <a href="#about" className="hover:text-white">
+                <a
+                  href="#about"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
                   About
                 </a>
               </li>
@@ -80,24 +99,35 @@ function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold">Company</h3>
+            <h3 className="text-sm font-bold text-white">
+              Company
+            </h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-gray-400">
+            <ul className="mt-4 space-y-3">
               <li>
-                <a href="#" className="hover:text-white">
-                  Home
+                <a
+                  href="#about"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
+                  About Us
                 </a>
               </li>
 
               <li>
-                <a href="#contact" className="hover:text-white">
+                <a
+                  href="#contact"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
                   Contact
                 </a>
               </li>
 
               <li>
-                <a href="#about" className="hover:text-white">
-                  Our Mission
+                <a
+                  href="#"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
+                  Careers
                 </a>
               </li>
             </ul>
@@ -105,18 +135,35 @@ function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold">Legal</h3>
+            <h3 className="text-sm font-bold text-white">
+              Legal
+            </h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-gray-400">
+            <ul className="mt-4 space-y-3">
               <li>
-                <a href="#" className="hover:text-white">
-                  Privacy Policy
+                <a
+                  href="#"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
+                  Privacy
                 </a>
               </li>
 
               <li>
-                <a href="#" className="hover:text-white">
-                  Terms & Conditions
+                <a
+                  href="#"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
+                  Terms
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-sm text-gray-400 transition hover:text-pink-400"
+                >
+                  Cookies
                 </a>
               </li>
             </ul>
@@ -125,20 +172,28 @@ function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-gray-800 pt-6 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-gray-800 pt-6 sm:flex-row sm:items-center sm:justify-between">
+
+          <p className="text-sm text-gray-500">
             © 2026 Dev Stack. All rights reserved.
           </p>
 
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-white">
+          <div className="flex items-center gap-5">
+            <a
+              href="#"
+              className="text-sm text-gray-500 transition hover:text-pink-400"
+            >
               Privacy
             </a>
 
-            <a href="#" className="hover:text-white">
+            <a
+              href="#"
+              className="text-sm text-gray-500 transition hover:text-pink-400"
+            >
               Terms
             </a>
           </div>
+
         </div>
 
       </div>
